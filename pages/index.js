@@ -9,7 +9,7 @@ const post = {
 }
 export default function Home() {
 
-  const ogImgURL = `http://localhost:3000/api/og?title=${post.title}&author=${post.authorship}&image=${post.mainImage}`;
+  const ogImgURL = `https://main--stupendous-duckanoo-28310c.netlify.app/api/og?title=${post.title}&author=${post.authorship}&image=${post.mainImage}`;
 
   console.log(ogImgURL);
 
@@ -30,8 +30,8 @@ export default function Home() {
         <meta name="twitter:title" content="OG title of the page" />
         <meta name="twitter:description" content="OG description of the page" />
 
-        <meta property="og:image" content="https://main--glittering-profiterole-8b0117.netlify.app/assets/images/og.jpg" />
-        <meta name="twitter:image" content="https://main--glittering-profiterole-8b0117.netlify.app/assets/images/og.jpg" />
+        <meta property="og:image" content={ogImgURL} />
+        <meta name="twitter:image" content={ogImgURL} />
 
       </Head>
 
